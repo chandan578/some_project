@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&family=Work+Sans:wght@900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+nav{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    background-color: blueviolet;
+}
+
+nav ul{
+    padding: 15px;
+    list-style: none;
+    /* align-items: center; */
+    font-size: 40px;
+    font-family: 'Roboto', sans-seri;
+}
+
+.gamecontainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    position: relative;
+    /* background: #183; */
+}
+
+.container{
+    display: grid;
+    grid-template-rows:repeat(3, 10vw);
+    grid-template-columns:repeat(3, 10vw);
+    font-family: serif;
+    position: relative;
+}
+.box{
+    border: 1px solid black;
+    font-size: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    background-color: rgb(143, 211, 211);
+    cursor: pointer;
+}
+.br-t{
+    border-top: none;
+}
+.br-r{
+    border-right: none;
+}
+.br-b{
+    border-bottom: none;
+}
+.br-l{
+    border-left: none;
+}
+
+.gameInfo{
+    font-family: 'Baloo Bhaina 2', cursive;
+    padding: 0 30px;
+}
+.gameInfo h1{
+    font-size: 2.5rem;
+}
+.info{
+    font-size: 22px;
+}
+
+.imgBox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+#reset {
+    margin: 8px;
+    padding: 5px 10px;
+    background: #3f5050;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: 'Baloo Bhaina 2', cursive;
+    border: solid;
+}
+.line{
+    height: 3px;
+    width: 0;
+    position: absolute;
+    background-color: purple;
+    transition: width 1s ease-in-out;
+}
+
+
+@media screen  and (max-width: 950px){
+    .gamecontainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container{
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+
+    }
+    .line{
+        height: 3px;
+        width: 0;
+        position: absolute;
+        background-color: purple;
+        transition: width 1s ease-in-out;
+    }
+}
